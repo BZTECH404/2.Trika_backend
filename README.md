@@ -11,21 +11,21 @@ The Trika backend is a RESTful API built with Express.js, designed to manage use
 
    
 2.**Install dependencies**:
-sh
+```sh
 npm install
 Environment Variables:
 Create a .env file in the root directory with the following variables:
 
-## makefile
+3. **makefile**
 PORT=8000
 mongodburl=your_mongodb_connection_string
-Run the application:
 
-## sh
+4. **Run the application**:
+```sh
 npm start
 
 //
-## API Endpoints
+5.**API Endpoints**
 User Routes
 Endpoint: /api/user
 Description: Manage user operations.
@@ -91,27 +91,27 @@ POST: Add new yoga service.
 PUT: Update yoga service.
 DELETE: Delete yoga service.
 
-## Error Handling
+6. **Error Handling**
 Errors are logged using winston.
 Errors are sent to the client with a 500 status and the error message.
 
-## Deployment
+7. **Deployment**
 Docker
 Build Docker image:
+sh
+docker build -t trika-backend.
 
-## sh
-docker build -t trika-backend .
-Run Docker container:
 
-## sh
+8. **Run Docker container**:
+```sh
 docker run -p 8000:8000 -d trika-backend
 
-## AWS
+9. **AWS**
 The application uses AWS services such as S3 for storage and is configured for deployment with AWS ECR and Serverless.
 
 
 
-## Scripts
+10. **Scripts**
 Start: npm start
 Deploy: npm run deploy
 Dev: npm run dev
@@ -123,9 +123,7 @@ AWS SDK: AWS services integration.
 Nodemailer: Email handling.
 JsonWebToken: Token-based authentication.
 Winston: Logging.
-Development
+
+11. **Development**
 The application is set up for development with nodemon for live-reloading.
 For more detailed information, refer to the code comments and the documentation provided within each route and controller.
-
-## arduino
-Copy and paste this into your `README.md` file in your repository. This should maintain the proper formatting and provide
