@@ -8,9 +8,10 @@ The Trika backend is a RESTful API built with Express.js, designed to manage use
    ```sh
    git clone https://github.com/BZTECH404/Trika_backend.git
    cd Trika_backend
-Install dependencies:
 
-## sh
+   
+2.**Install dependencies**:
+sh
 npm install
 Environment Variables:
 Create a .env file in the root directory with the following variables:
