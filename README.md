@@ -1,31 +1,27 @@
-# Trika Backend
-
+Trika Backend
 The Trika backend is a RESTful API built with Express.js, designed to manage users, carousel items, motivational content, services, about sections, testimonials, contacts, blogs, and yoga services. The application integrates with AWS services and Docker for deployment.
 
-## Installation
+Installation
+Clone the repository:
 
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/BZTECH404/Trika_backend.git
-   cd Trika_backend
+sh
+git clone https://github.com/BZTECH404/Trika_backend.git
+cd Trika_backend
+Install dependencies:
 
-   
-2.**Install dependencies**:
-```sh
+sh
 npm install
 Environment Variables:
 Create a .env file in the root directory with the following variables:
 
-3. **makefile**
+env
 PORT=8000
 mongodburl=your_mongodb_connection_string
+Run the application:
 
-4. **Run the application**:
-```sh
+sh
 npm start
-
-//
-5.**API Endpoints**
+API Endpoints
 User Routes
 Endpoint: /api/user
 Description: Manage user operations.
@@ -90,28 +86,22 @@ GET: Retrieve yoga services.
 POST: Add new yoga service.
 PUT: Update yoga service.
 DELETE: Delete yoga service.
-
-6. **Error Handling**
+Error Handling
 Errors are logged using winston.
 Errors are sent to the client with a 500 status and the error message.
-
-7. **Deployment**
+Deployment
 Docker
 Build Docker image:
+
 sh
-docker build -t trika-backend.
+docker build -t trika-backend .
+Run Docker container:
 
-
-8. **Run Docker container**:
-```sh
+sh
 docker run -p 8000:8000 -d trika-backend
-
-9. **AWS**
+AWS
 The application uses AWS services such as S3 for storage and is configured for deployment with AWS ECR and Serverless.
-
-
-
-10. **Scripts**
+Scripts
 Start: npm start
 Deploy: npm run deploy
 Dev: npm run dev
@@ -123,7 +113,6 @@ AWS SDK: AWS services integration.
 Nodemailer: Email handling.
 JsonWebToken: Token-based authentication.
 Winston: Logging.
-
-11. **Development**
+Development
 The application is set up for development with nodemon for live-reloading.
 For more detailed information, refer to the code comments and the documentation provided within each route and controller.
